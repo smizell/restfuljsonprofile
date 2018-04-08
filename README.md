@@ -35,7 +35,7 @@ Profile:
 {
   "url": "http://example.com/profile/todo-item",
   "properties": {
-    "todo": { "title": "Todo details" },
+    "todo": { "title": "Todo Details" },
   },
   "links": {
     "mark_complete_url": {
@@ -46,7 +46,7 @@ Profile:
       "responds_with": { "reference_url": "#" }
     },
     "mark_incomplete_url": {
-      "title": "Mark Todo Complete",
+      "title": "Mark Todo Incomplete",
       "implementation": {
         "method": "PUT"
       },
