@@ -16,6 +16,47 @@ Second, it relies on one affordance per link. This is to simplify in design thin
 
 Third, it limits the definition of implementation details. The more details that can be pushed to runtime, the more flexible and evolvable and API can be. In defining a small set of the details, RESTful JSON Profile can describe just enough information that can be used to make HTTP requests.
 
+## Example
+
+RESTful JSON document for a todo item in a todo application:
+
+```json
+{
+  "profile_url": "http://example.com/profile/todo-item",
+  "url": "...",
+  "todo": "Get the milk",
+  "mark_complete_url": "..." 
+}
+```
+
+Profile:
+
+```json
+{
+  "url": "http://example.com/profile/todo-item",
+  "properties": {
+    "todo": { "title": "Todo details" },
+  },
+  "links": {
+    "mark_complete_url": {
+      "title": "Mark Todo Complete",
+      "implementation": {
+        "method": "PUT"
+      },
+      "responds_with": { "reference_url": "#" }
+    },
+    "mark_incomplete_url": {
+      "title": "Mark Todo Complete",
+      "implementation": {
+        "method": "PUT"
+      },
+      "responds_with": { "reference_url": "#" }
+    },
+    "edit_url": { "rel": "edit" }
+  }
+}
+```
+
 ### Inflences
 
 This profile specification is influenced by some great technologies.
@@ -82,7 +123,7 @@ Link implementation details go beyond defining profile semantics and allow for s
 
 
 [ALPS]: http://alps.io/
-[HAL FORMS]: https://rwcbook.github.io/hal-forms/
+[HAL-FORMS]: https://rwcbook.github.io/hal-forms/
 [JSON Schema]: http://json-schema.org/
 [RESTful JSON]: http://restfuljson.org/
 [OpenAPI]: https://github.com/OAI/OpenAPI-Specification
