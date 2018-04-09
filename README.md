@@ -47,14 +47,14 @@ Profile:
       "implementation": {
         "method": "PUT"
       },
-      "responds_with": { "reference_url": "#" }
+      "responds_with": { "ref_url": "#" }
     },
     "mark_incomplete_url": {
       "title": "Mark Todo Incomplete",
       "implementation": {
         "method": "PUT"
       },
-      "responds_with": { "reference_url": "#" }
+      "responds_with": { "ref_url": "#" }
     },
     "edit_url": { "rel": "edit" }
   }
@@ -99,8 +99,10 @@ This profile specification is influenced by some great technologies.
             - (Link Implementation Details)
             - (Reference)
         - `properties` - Properites for building a request
-            - *property-name* (Base)
-                - `required`: false (boolean, default)
+            - *property-name* (enum)
+                - (Base)
+                    - `required`: false (boolean, default)
+                - (Reference)
         - `responds_with` (enum) - Profile for the link response
             - (Profile Object)
             - (Reference)
