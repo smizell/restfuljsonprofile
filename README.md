@@ -2,6 +2,8 @@
 
 RESTful JSON Profile is a way for defining properties and links for a RESTful JSON document.
 
+**Status**: in progress
+
 This specification makes use of the conventions defined in [RFC 2119][].
 
 > The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL  NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119][].
